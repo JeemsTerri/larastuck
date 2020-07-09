@@ -17,7 +17,7 @@ class CreateProfilesTable extends Migration
             $table->bigIncrements('id');
             $table->string('fullname');
             $table->text('address')->nullable();
-            $table->string('photo')->nullable();
+            $table->string('photo')->default('noimage.png');
             $table->timestamps();
         });
     }
