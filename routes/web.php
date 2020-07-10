@@ -19,6 +19,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::group(['prefix' => 'question'], function () {
+    Route::get('/', 'QuestionController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/{question}', 'QuestionController@show');
+    Route::get('/create', 'QuestionController@create');
+    Route::post('/', 'QuestionController@store');
+
+    Route::put('/{question}', 'QuestionController@update');
+    Route::delete('/{question}', 'QuestionController@destroy');
+});
