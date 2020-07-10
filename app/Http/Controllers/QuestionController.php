@@ -15,7 +15,6 @@ class QuestionController extends Controller
     public function index()
     {
         $questions = Question::with('author')->paginate(8);
-        // dd($questions->first()->since);
         return view('questions.index', compact('questions'));
     }
 
