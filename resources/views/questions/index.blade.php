@@ -32,28 +32,34 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        {!! $question->content !!}
+                        {!! Str::limit($question->content, $limit = 150, $end = ' ... ') !!}
+                        {{-- {!! $question->content !!} --}}
                     </div>
                     <div class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3">
                         <div class="px-4 pt-3">
                             <a href="javascript:void(0)"
-                                class="text-muted d-inline-flex align-items-center align-middle" data-abc="true"> 
-                                <i class="fa fa-heart text-danger"></i>&nbsp; 
+                                class="text-muted d-inline-flex align-items-center align-middle"> 
+                                <i class="fas fa-comment-alt"></i>&nbsp; 
                                 <span class="align-middle">6 Answer</span>
                             </a>
                             <span class="text-muted d-inline-flex align-items-center align-middle ml-4">
-                            <i class="fa fa-eye text-muted fsize-3"></i>&nbsp; 
+                            <i class="fa fa-check-circle text-success fsize-3"></i>&nbsp; 
                             <span class="align-middle badge badge-success">Answered</span> </span> 
                         </div>
                         <div class="px-4 pt-3"> 
-                            <button type="button" class="btn btn-primary"><i
-                                    class="ion ion-md-create"></i>&nbsp; Reply
+                            <button type="button" class="btn btn-outline-primary"><i
+                                    class="fas fa-plus"></i>&nbsp; Reply
                             </button> 
+                            <button type="button" class="btn btn-primary"><i
+                                class="fas fa-eye"></i>&nbsp; Show
+                        </button> 
                         </div>
                     </div>
                 </div>
             </div>
         @endforeach
+
+        {{ $questions->links() }}
     </div>
 </div>
 @endsection
