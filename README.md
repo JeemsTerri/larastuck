@@ -22,7 +22,9 @@ $ php artisan migrate --seed
 - [x] Laravel UI
 - [x] Auth (Login/Register)
 - [x] User Migration
-- [ ] Question Migration
+- [x] Question Migration
+- [x] User Seeder
+- [x] Question Seeder
 - [ ] Answer Migration
 - [ ] Blade Template
 - [ ] CRUD Question
