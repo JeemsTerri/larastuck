@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+
+    <script src="https://kit.fontawesome.com/9705deedd5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app">
