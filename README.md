@@ -15,7 +15,7 @@ Isi .env sesuai environment yang digunakan.
 $ php artisan key:generate
 $ composer install
 $ npm install && npm run dev
-$ php artisan migrate
+$ php artisan migrate --seed
 ```
 
 ## Todo
